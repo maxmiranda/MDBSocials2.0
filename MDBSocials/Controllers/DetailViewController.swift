@@ -100,7 +100,7 @@ class DetailViewController: UIViewController {
     
     func setupButtons() {
         numInterested = UIButton(frame: CGRect(x: 30,y:550,width:view.frame.width/2 - 40, height:40))
-        numInterested.setTitle("\(post.numInterested!) people interested", for: .normal)
+        numInterested.setTitle("\(post.numInterested!) interested", for: .normal)
         numInterested.addTarget(self, action: #selector(toWhosInterested), for: .touchUpInside)
         numInterested.backgroundColor = .red
         view.addSubview(numInterested)
@@ -143,7 +143,7 @@ class DetailViewController: UIViewController {
     
     @objc func interestedClick(sender: UIButton!) {
         if !interestedClicked && !post.membersInterested.contains(cUserId) {
-            numInterested.setTitle("\(post.numInterested! + 1) people interested", for: .normal)
+            numInterested.setTitle("\(post.numInterested! + 1) interested", for: .normal)
             FirebaseAPIClient.incrementPostInterested(postId: post.id!, cUserId: cUserId)
             interestedButton.backgroundColor = UIColor(red: 6/255, green: 112/255, blue: 31/255, alpha: 1.0)
         } else {
