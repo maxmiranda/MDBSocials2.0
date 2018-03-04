@@ -18,10 +18,10 @@ class MainTabBarController: UITabBarController {
         super.viewDidLoad()
         nav = navigationItem
         let tabOne = FeedViewController()
-        let image1 = UIImage(named: "Search")
+        let image1 = UIImage(named: "Feed")
         tabOne.tabBarItem = UITabBarItem(title: "Feed", image: image1, tag: 0)
         let tabTwo = MyEventsViewController()
-        let image2 = UIImage(named: "My Events")
+        let image2 = UIImage(named: "MyEvents")
         tabTwo.tabBarItem = UITabBarItem(title: "My Events", image: image2, tag: 1)
         self.viewControllers = [tabOne, tabTwo]
         // Do any additional setup after loading the view.

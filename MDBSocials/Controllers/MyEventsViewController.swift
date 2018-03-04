@@ -44,7 +44,7 @@ class MyEventsViewController: UIViewController, UITabBarControllerDelegate {
     }
     
     func setupNavBar() {
-        myEventsLabel = UILabel(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: 40))
+        myEventsLabel = UILabel(frame: CGRect(x: view.frame.width/4, y: 0, width: view.frame.width/2, height: 40))
         myEventsLabel.text = "My Events"
         myEventsLabel.font = UIFont(name: "Lato-Regular", size: 26)
         myEventsLabel.textAlignment = .center
