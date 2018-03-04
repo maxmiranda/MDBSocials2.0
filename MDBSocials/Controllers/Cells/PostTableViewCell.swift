@@ -18,7 +18,7 @@ class PostTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        posterImageView = UIImageView(frame: CGRect(x: 50, y: 20, width: 40, height: 40))
+        posterImageView = UIImageView(frame: CGRect(x: 50, y: 20, width: 80, height: 80))
         posterImageView.contentMode = .scaleAspectFit
         
         postImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: contentView.frame.width, height: 200))

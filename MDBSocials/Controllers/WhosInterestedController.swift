@@ -71,14 +71,11 @@ extension WhosInterestedController: UITableViewDelegate, UITableViewDataSource {
         cell.awakeFromNib()
         cell.postMemberName.text = user.name!
         cell.postEventName.text = user.username!
-        //cell.startLoadingView()
-        /*user.getPicture().then { picture in
+        Utils.getImage(withUrl: user.imageUrl!).then { picture in
             DispatchQueue.main.async {
-                user.profilePicture = picture
-                cell.mainImageView.image = picture
-                cell.stopLoadingView()
+                cell.posterImageView.image = picture
             }
-        }*/
+        }
         cell.isUserInteractionEnabled = false
         return cell
     }
